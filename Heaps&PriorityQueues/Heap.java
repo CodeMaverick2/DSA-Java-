@@ -52,5 +52,26 @@ public class Heap {
         deleteMin(h);
         printheap(h);
     }
+    public int findKthLargest(int[] nums, int k) {
+        Heap1 h = new Heap1(nums.length);
+        for(int i=0;i<nums.length;i++){
+            h.A[i] = nums[i];
+        }
+        for(int i=0;i<k;i++){
+            deleteMin(h);
+        }
+        return h.A[h.size];
+    }
+    public int findKthSmallest(int[] nums, int k) {
+        Heap1 h = new Heap1(nums.length);
+        for(int i=0;i<nums.length;i++){
+            h.A[i] = nums[i];
+        }
+        for(int i=0;i<k;i++){
+            deleteMin(h);
+        }
+        return h.A[h.size];
+    }
+    
 }
 
