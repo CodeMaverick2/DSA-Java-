@@ -72,6 +72,6 @@ public class Heap {
         }
         return h.A[h.size];
     }
-    
+
 }
 
